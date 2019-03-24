@@ -1,0 +1,21 @@
+---
+Test
+---
+!define TEST_SYSTEM {slim}
+* specify the classpath here !path path_to_target_folder
+
+
+!|import         |
+|com.example.demo|
+
+ * This is test for division
+!|VerifyArithmeticOperation                |
+|x|y|quotient?|remainder?|getX?   |getY?   |
+|2|1|2        |0         |$Xvalue=|$Yvalue=|
+
+
+ * This will be a test for multiplication
+ 
+!|VerifyArithmeticOperation|
+|x       |y       |product?|
+|$Xvalue |$Yvalue |6       |
