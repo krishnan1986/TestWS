@@ -1,0 +1,20 @@
+---
+Edit: no
+Files: no
+Properties: no
+RecentChanges: no
+Refactor: no
+Search: no
+Test
+Versions: no
+WhereUsed: no
+---
+!|import|
+|com.example.demo|
+
+
+!|VerifyArithmeticOperation|
+|x|y|quotient?|remainder?|
+|2|1|2|0|
+|3|2|1|1|
+|4|2|2|0|
