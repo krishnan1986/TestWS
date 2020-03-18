@@ -2,6 +2,7 @@ package com.selenium.mytest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.io.File;
@@ -36,14 +37,18 @@ public class OpenSite {
         try {
             Properties props =  new Properties();
             props.load(new FileInputStream(new File("./src/main/resources/gmail.properties")));
-            WebDriver driver = new SafariDriver();
+           // WebDriver driver = new SafariDriver();
+
+            System.setProperty("webdriver.chrome.driver", "/Users/krishnan/Downloads/chromedriver");
+
+            WebDriver driver= new ChromeDriver();
 
             driver.get(name);
 
             // provide credentials //*[@id="password"]/div[1]/div/div[1]/input
 
            driver.findElement(By.id("identifierId")).sendKeys(props.getProperty("username"));
-           Thread.sleep(4000);
+           Thread.sleep(10000);
            driver.findElement(By.id("identifierNext")).click();
             Thread.sleep(4000);
            driver.findElement(By.id("password")).sendKeys(props.getProperty("password"));
