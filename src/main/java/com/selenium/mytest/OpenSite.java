@@ -31,17 +31,18 @@ public class OpenSite {
 
         return login();
     }
-
+ // to be used
     private String login() {
         String isLoggedIn="no";
         try {
             Properties props =  new Properties();
             props.load(new FileInputStream(new File("./src/main/resources/gmail.properties")));
-           // WebDriver driver = new SafariDriver();
+            //WebDriver driver = new SafariDriver();
 
-            System.setProperty("webdriver.chrome.driver", "/Users/krishnan/Downloads/chromedriver");
-
+            System.setProperty("webdriver.chrome.driver", "/Users/krishnan/Downloads/chromedriver-3");
+            System.setProperty("webdriver.chrome.logfile","/Users/krishnan/Downloads/chromedriver.log");
             WebDriver driver= new ChromeDriver();
+           // WebDriver driver = new SafariDriver();
 
             driver.get(name);
 
@@ -64,10 +65,13 @@ public class OpenSite {
         return isLoggedIn;
     }
 
-
+// not to be used only for testing purpose
     private String openWebSite(String name) {
         String isOpen="no";
         try {
+            System.setProperty("webdriver.chrome.driver", "/Users/krishnan/Downloads/chromedriver-3");
+            System.setProperty("webdriver.chrome.logfile","/Users/krishnan/Downloads/chromedriver.log");
+
             WebDriver driver = new SafariDriver();
 
             driver.get(name);
