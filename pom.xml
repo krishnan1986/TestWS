@@ -13,7 +13,7 @@
      <dependency>
          <groupId>org.fitnesse</groupId>
          <artifactId>fitnesse</artifactId>
-         <version>20190224</version>
+         <version>20241026</version>
      </dependency>
 
      <!-- https://mvnrepository.com/artifact/smartrics.restfixture/smartrics-RestFixture -->
